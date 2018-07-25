@@ -1,0 +1,39 @@
+{
+    "name": "jiit/mypackage",
+    "description": "my first package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sathishkumar.t",
+            "email": "sathishkumar.t@jiit.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "jiit\\MyPackage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "jiit\\MyPackage\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "jiit\\MyPackage\\MyPackageServiceProvider"
+            ],
+            "aliases": {
+                "MyPackageFacade" : "jiit\\MyPackage\\MyPackageFacade"
+            }
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3@dev",
+        "orchestra/testbench": "^3.7@dev"
+    }
+}
